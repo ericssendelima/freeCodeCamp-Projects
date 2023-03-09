@@ -1,1 +1,0 @@
-const myStr = "FirstLine\n\t\\SecondLine\nThirdLine"; // Altere esta linha
