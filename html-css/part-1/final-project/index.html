@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Formulário de pesquisa</title>
+    <link rel="stylesheet" href='styles.css'/>
+  </head>
+  <body>
+    <section class="title">
+      <h1 id="title">Formulário final</h1>
+      <p id="description">Formulário de pesquisa final</p>
+     </section>
+     <section class="form">
+       <form id="survey-form">
+        <fieldset name="datas">
+          <legend>Personal data</legend>
+          <label for="name" id="name-label">Name: <input id="name" type="text" required placeholder="Write your name"/></label>
+          <label for="email" id="email-label">Email: <input id="email" type="email" required placeholder="Write your email"/></label>
+          <label for="number" id="number-label">Age: <input id="number" type="number" min="18" max="120" required placeholder="Age"/></label>          
+        </fieldset>
+        <fieldset name="selections" >
+          <legend>Professional</legend>       
+          <label for="dropdown">What's your occupation?
+            <select id="dropdown"  class="inline">
+              <option value=" ">(Select one)</option>
+              <option value="1">Estudante</option>
+              <option value="2">Trabalhando</option>
+              <option value="3">Graduação</option>
+              <option value="4">Outro</option>
+            </select>
+          </label>
+          <label for="business-account"  class="inline"><input id="business-account" type="radio" name="account" value="1"/>Business account</label>
+          <label for="personal account"  class="inline"><input id="personal-account" type="radio" name="account" value="2"/>Personal account</label>
+        </fieldset>
+        <fieldset name="finals">
+          <legend>Finals options</legend>
+          <p  class="inline">Colors</p>
+          <label for="blue" class="inline"><input id="blue" type="checkbox" value="blue"/> Blue</label>
+          <label for="red" class="inline"><input id="red" type="checkbox" value="red"/> Red</label>
+          <label for="green" class="inline"><input id="green" type="checkbox" value="green"/> Green</label>
+          <label for="black" class="inline"><input id="black" type="checkbox" value="black"/> Black</label>
+          <label for="comments">Write something:
+            <textarea id="comments" name="comments" rows="3" cols="30" placeholder="Aditional comments..."></textarea>
+        </fieldset>
+        <button id="submit" value="Submit">Submit</button>
+       </form>      
+     </section> 
+  </body>
+</html>
