@@ -6,7 +6,7 @@ function rangeOfNumbers(startNum, endNum) {
     numbers.push(endNum);
     return numbers;
   }
-}
+}// rangeOfNumbers(1, 5) => [1, 2, 3, 4, 5]
 
 /*
 function rangeOfNumbers(startNum, endNum) {
