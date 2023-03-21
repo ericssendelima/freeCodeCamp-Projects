@@ -1,0 +1,146 @@
+Adicionar pares de chave-valor a objetos JavaScript
+Ex.:
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28
+};
+// Altere apenas o código abaixo desta linha
+foods.bananas = 13;
+foods['grapes'] = 35;
+foods.strawberries = 27;
+foods['hair color'] = 'dyed orange';
+const eyes = 'eye color';
+foods[eyes] = 'brown';
+// Altere apenas o código acima desta linha
+console.log(foods); //{ apples: 25, oranges: 32, plums: 28, bananas: 13, grapes: 35, strawberries: 27,'hair color': 'dyed orange', 'eye color': 'brown' }
+======================-------------------------------==========================----------------------========================
+Modificar um objeto aninhado dentro de um objeto
+Ex.:
+let userActivity = {
+  id: 23894201352,
+  date: 'January 1, 2017',
+  data: {
+    totalUsers: 51,
+    online: 42
+  }
+};
+// Altere apenas o código abaixo desta linha
+userActivity.data.online = 45;
+// Altere apenas o código acima desta linha
+console.log(userActivity);
+======================-------------------------------==========================----------------------========================
+Usar a palavra-chave delete para remover propriedades de objetos
+Ex.:
+let foods = { apples: 25, oranges: 32, plums: 28, bananas: 13, grapes: 35, strawberries: 27};
+// Altere apenas o código abaixo desta linha
+delete foods.oranges;
+delete foods.plums;
+delete foods.strawberries; 
+// Altere apenas o código acima desta linha
+console.log(foods); //{ apples: 25, bananas: 13, grapes: 35 }
+======================-------------------------------==========================----------------------========================
+Verificar se um objeto tem uma propriedade
+Ex.:
+let users = { Alan: {age: 27, online: true}, Jeff: {age: 32, online: true}, Sarah: {age: 48, online: true}, Ryan: {age: 19, online: true} };
+
+function isEveryoneHere(userObj) {
+  // Altere apenas o código abaixo desta linha
+  if("Alan" in userObj && "Jeff" in userObj && "Sarah" in userObj && "Ryan" in userObj){
+    return true;
+  }else{
+    return false;
+  };
+  // Altere apenas o código acima desta linha
+};
+console.log(isEveryoneHere(users));// true
+/*users.hasOwnProperty('Alan');
+'Alan' in users;*/
+======================-------------------------------==========================----------------------========================
+Iterar através das chaves de um objeto com a declaração for...in
+Ex.:
+const users = {
+  Alan: {online: false},
+  Jeff: {online: true},
+  Sarah: {online: false}
+}
+
+function countOnline(usersObj) {
+  // Altere apenas o código abaixo desta linha
+  let count = 0;
+
+  for(let user in usersObj){
+    if(usersObj[user].online === true){
+      count++;
+    };
+  };
+  return count;
+  // Altere apenas o código acima desta linha
+};
+
+console.log(countOnline(users));//1
+======================-------------------------------==========================----------------------========================
+Gerar um array de todas as chaves de objeto com Object.keys()
+Ex.:
+let users = {
+  Alan: {
+    age: 27,
+    online: false
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: false
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function getArrayOfUsers(obj) {
+  // Altere apenas o código abaixo desta linha
+   return Object.keys(obj);
+  // Altere apenas o código acima desta linha
+}
+
+console.log(getArrayOfUsers(users));//[ 'Alan', 'Jeff', 'Sarah', 'Ryan' ]
+======================-------------------------------==========================----------------------========================
+Modificar o array armazenado em um objeto
+Ex.:
+let user = {
+  name: 'Kenneth',
+  age: 28,
+  data: {
+    username: 'kennethCodesAllDay',
+    joinDate: 'March 26, 2016',
+    organization: 'freeCodeCamp',
+    friends: [
+      'Sam',
+      'Kira',
+      'Tomo'
+    ],
+    location: {
+      city: 'San Francisco',
+      state: 'CA',
+      country: 'USA'
+    }
+  }
+};
+
+function addFriend(userObj, friend) {
+  // Altere apenas o código abaixo desta linha
+  userObj.data.friends.push(friend)
+  return user.data.friends
+  // Altere apenas o código acima desta linha
+}
+
+console.log(addFriend(user, 'Pete'));//[ 'Sam', 'Kira', 'Tomo', 'Pete' ]
+
+
+
+
+
