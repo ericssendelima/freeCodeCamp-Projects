@@ -28,4 +28,15 @@ console.log(getIndexToIns([2, 20, 10], 19));
 console.log(getIndexToIns([10, 20, 30, 40, 50], 30));
 
 
+/*
+function getIndexToIns(arr, num) {
+  return arr
+    .concat(num)
+    .sort((a, b) => a - b)
+    .indexOf(num);
+}
+
+getIndexToIns([1, 3, 4], 2);
+*/
+
  
